@@ -1,0 +1,443 @@
+    1  #!/bin/bash
+    2  #Bash Script to download, install Mogoshell and show current ip
+    3  # version:Sept 2026
+    4  mongopkg="mongodb-mongosh_2.12.0_amd64.deb"
+    5  mongodlurl="https://downloads.mongodb.com/compass/$mongopkg"
+    6  echo -e "\nDownloading mongopackage: $mongopkg from:"
+    7  echo -e "$mongodlurl \n"
+    8  # curl -o name_to_save_as URL
+    9  curl -o $mongopkg $mongodlurl
+   10  echo -e "\n\nInstalling package: $mongopkg :\n"
+   11  # sudo dpkg -i DEB_PACKAGE
+   12  sudo dpkg -i $mongopkg
+   13  currentip=$(curl icanhazip.com)
+   14  echo -e "\n\n*********************************************************"
+   15  echo -e "You will need add your current address: $currentip"
+   16  echo "to permitted list on the 'Network Access' page "
+   17  echo "on your MongoDB Atlas page"
+   18  echo -e "*********************************************************\n\n"
+   19  vi installmongodbshell.sh
+   20  curl -o mongodb-mongosh_1.10.6_amd64.deb https://downloads.mongodb.com/compass/mongodb-mongosh_2.12.0_amd64.deb
+   21  sudo dpkg -i DEB_PACKAGE
+   22  sudo dpkg -i mongodb-mongosh_1.10.6_amd64.deb
+   23  curl icanhazip.com
+   24  mkdir devops
+   25  cd devops
+   26  mkdir week1
+   27  cd week1
+   28  echo "Hello Devops week1" > hellow.sh
+   29  cat hellow.sh
+   30  git init
+   31  git add hellow.sh
+   32  git commit -m "hellow"
+   33  git config --global user.email "X00226716@myTUDublin.ie"
+   34  git config --global user.name "Maggie Donnelly"
+   35  git commit -m "hellow"
+   36  git branch -m main
+   37  git remote add origin git@github.com:X00226716-maggie/devopsWeek1.git
+   38  git push -u origin main
+   39  git remote add origin https://github.com/X00226716-maggie/devopsWeek1.git
+   40  git remote set-url origin  https://github.com/X00226716-maggie/devopsWeek1.git
+   41  git push -u origin main
+   42  echo "Hello DEVOPS week1" > hellow.sh
+   43  cat hellow.sh
+   44  git add hellow.sh
+   45  git commit -m "commit2"
+   46  git push
+   47  clr
+   48  clear
+   49  cd..
+   50  cd ..
+   51  mkdir week2
+   52  cd week2
+   53  git init
+   54  git pull https://github.com/X00226716-maggie/devopsWeek1
+   55  ls
+   56  echo "nice to be here" >> hellow.sh
+   57  cat hellow.sh
+   58  git add .
+   59  git commit .
+   60  git commit -m "commit3"
+   61  git push
+   62  git push -u origin main
+   63  cd week2
+   64  ls
+   65  cd devops
+   66  cd week 2
+   67  cd week2
+   68  cd devops
+   69  cd week2
+   70  git init
+   71  ls
+   72  cat
+   73  cat hellow.sh
+   74  git add .
+   75  git add hellow.sh
+   76  git commit -m "commit3"
+   77  git pull https://github.com/X00226716-maggie/devopsWeek1
+   78  git clone https://github.com/X00226716-maggie/devopsWeek1
+   79  cd devopsWeek1
+   80  git branch
+   81  ls
+   82  nano hellow.sh
+   83  git status
+   84  git add hello.sh
+   85  git hellow.sh
+   86  git add hellow.sh
+   87  git commit -m "third commit"
+   88  git push origin main
+   89  git branch
+   90  git log
+   91  git log --oneline
+   92  git tag version1 325a7b1
+   93  git tag version2 761f6e9
+   94  git tag version3 e486590
+   95  git tag
+   96  git push origin --tags
+   97  mkdir week2tags
+   98  cd week2tags
+   99  git init
+  100  git clone https://github.com/X00226716-maggie/devopsWeek1
+  101  git tags
+  102  git tag
+  103  cd devopsWeek1
+  104  git tag
+  105  git fetch --tags
+  106  git fetch origin tag version1
+  107  git branch
+  108  git checkout -b version1branch version1
+  109  vi hellow.sh
+  110  cat hellow.sh
+  111  git add .
+  112  git commit -m "fourth commit"
+  113  curl icanhazip.com
+  114  cd devops/week2/devopsWeek1
+  115  ls
+  116  git status
+  117  cat hellow.shm-a
+  118  cat hellow.sh
+  119  rm hellow.shm-a
+  120  ls
+  121  git add hellow.sh
+  122  git status
+  123  cd week2tags
+  124  cd devopsWeek1
+  125  git branch
+  126  git switch version1branch
+  127  ls
+  128  cat hellow.sh
+  129  echo "Hello devops week1 tag test" > hellow.sh
+  130  cat hellow.sh
+  131  git add hellow.sh
+  132  git commit -m "fifth commit"
+  133  git push -u origin version1branch
+  134  clear
+  135  cd ..
+  136  cd week1
+  137  git init
+  138  ssh-keygen -t ed25519 -C "X00226716@myTUDublin.ie"
+  139  cat ~/.ssh/id_ed25519.pub
+  140  git remote add origin git@github.com:X00226716-maggie/devopsWeek1.git
+  141  git remote set-url origin git@github.com:X00226716-maggie/devopsWeek1.git
+  142  git remote -v
+  143  git init
+  144  git status
+  145  curl icanhazip.com
+  146  ls
+  147  cat week4
+  148  cat week4.txt
+  149  vi week4.txt
+  150  curl icanhazip.com
+  151  mongosh "mongodb+srv://cluster0.0itr0wc.mongodb.net/" --apiVersion 1 --username x00226716_db_user
+  152  ls
+  153  cat ~/.ssh/id_ed25519.pub
+  154  curl icanhazip.com
+  155  mongosh "mongodb+srv://cluster0.0itr0wc.mongodb.net/" --apiVersion 1 --username x00226716_db_user
+  156  git --version
+  157  ssh -V
+  158  ls -la ~/.ssh
+  159  ssh -T git@github.com
+  160  git clone git@github.com:pearse1104/X00226716.git
+  161  cd X00226716
+  162  echo "test for ca1" > test.txt
+  163  cat test.txt
+  164  git add test.txt
+  165  git commit -m "add test file hopefully"
+  166  git push
+  167  mkdir ca
+  168  cd ca
+  169  ls
+  170  cd X00226716
+  171  ls
+  172  git clone pearse1104/CA1/SOFTWARE
+  173  cd..
+  174  cd ..
+  175  cd pearse1104
+  176  git remote add origin https://github.com/pearse1104/X00226716
+  177  git status
+  178  git remote -v
+  179  git remote add origin github.com/pearse1104/X00226716
+  180  git remote add origin 
+  181  git remote add origin github.com/X00226716-maggie
+  182  cd X00226716
+  183  ls
+  184  git status
+  185  git remote -v
+  186  git remote add origin git@github.com:pearse1104/X00226716.git
+  187  git clone pearse1104/CA1-SOFTWARE
+  188  git remote add origin git@github.com:pearse1104/CA1-SOFTWARE.git
+  189  cd ..
+  190  git remote add origin git@github.com:pearse1104/X00226716.git
+  191  git remote add origin git@github.com:pearse1104/CA1-SOFTWARE.git
+  192  cd X00226716
+  193  mkdr devopsCA1sw
+  194  mkdir devopsCA1sw
+  195  cd ..
+  196  cd devopsCA1sw
+  197  git@github.com:X00226716-maggie/devopsCA1sw.git
+  198  git remote add origin git@github.com:pearse1104/CA1-SOFTWARE
+  199  git remote add origin 
+  200  ls
+  201  cd X00226716
+  202  cd pearse1104
+  203  cd CA1-SOFTWARE
+  204  git clone Collab
+  205  git clone git@github.com:pearse1104/CA1-SOFTWARE.git
+  206  ls
+  207  cd CA1-SOFTWARE
+  208  lsd
+  209  ls
+  210  bash user-setup.sh
+  211  ls
+  212  git add user.txt devopsCA1sw
+  213  mv user.txt devopsCA1sw
+  214  ls
+  215  mv user-setup.sh devopsCA1aw
+  216  ls
+  217  cd devopsCA1sw
+  218  docker run --name redis-tutorial -p 6379:6379 -d redis:latest
+  219  git clone https://github.com/X00226716-maggie/lab9.git
+  220  cd lab9
+  221  ls
+  222  nano validate-data.sh
+  223  chmod +x validate-data.sh
+  224  ./validate-data.sh John 0871234567
+  225  bash validate-data.sh "pearse mccarthy" "0831122334"
+  226  bash validate-data.sh "pearse mccarthy" "08311223344"
+  227  bash validate-data.sh "pearseT mccarthy" "0831122334"
+  228  nano validate-data.sh
+  229  ls
+  230  mkdir -p .github/workflows
+  231  cd .github
+  232  cd workflows
+  233  cd basictests.yml
+  234  .github/workflows/basictests.yml
+  235  cat << 'EOF' > .github/workflows/basictests.yml
+name: Basic Tests
+
+on:
+  push:
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./validate-data.sh
+
+      - name: Test valid name and mobile number
+        run: |
+          result=$(./validate-data.sh John 0871234567)
+          echo "Expected: PASS, Actual: $result"
+          test "$result" = "PASS"
+
+      - name: Test name exceeding 15 characters
+        run: |
+          result=$(./validate-data.sh ChristopherAlexander 0871234567)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+
+      - name: Test mobile number exceeding 10 characters
+        run: |
+          result=$(./validate-data.sh John 087123456789)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+EOF
+
+  236  cat << 'EOF' > .github/workflows/basictests.yml
+name: Basic Tests
+
+on:
+  push:
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./validate-data.sh
+
+      - name: Test valid name and mobile number
+        run: |
+          result=$(./validate-data.sh John 0871234567)
+          echo "Expected: PASS, Actual: $result"
+          test "$result" = "PASS"
+
+      - name: Test name exceeding 15 characters
+        run: |
+          result=$(./validate-data.sh ChristopherAlexander 0871234567)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+
+      - name: Test mobile number exceeding 10 characters
+        run: |
+          result=$(./validate-data.sh John 087123456789)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+EOF
+
+  237  cat << 'EOF' > .github/workflows/basictests.yml
+name: Basic Tests
+
+on:
+  push:
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./validate-data.sh
+
+      - name: Test valid name and mobile number
+        run: |
+          result=$(./validate-data.sh John 0871234567)
+          echo "Expected: PASS, Actual: $result"
+          test "$result" = "PASS"
+
+      - name: Test name exceeding 15 characters
+        run: |
+          result=$(./validate-data.sh ChristopherAlexander 0871234567)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+
+      - name: Test mobile number exceeding 10 characters
+        run: |
+          result=$(./validate-data.sh John 087123456789)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+EOF
+
+  238  cat << 'EOF' > .github/workflows/basictests.yml
+name: Basic Tests
+
+on:
+  push:
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./validate-data.sh
+
+      - name: Test valid name and mobile number
+        run: |
+          result=$(./validate-data.sh John 0871234567)
+          echo "Expected: PASS, Actual: $result"
+          test "$result" = "PASS"
+
+      - name: Test name exceeding 15 characters
+        run: |
+          result=$(./validate-data.sh ChristopherAlexander 0871234567)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+
+      - name: Test mobile number exceeding 10 characters
+        run: |
+          result=$(./validate-da
+
+
+
+
+
+  239  cat << 'EOF' > basictests.yml
+name: Basic Tests
+
+on:
+  push:
+
+jobs:
+  lab9-basic-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x ./validate-data.sh
+
+      - name: Test valid name and mobile number
+        run: |
+          result=$(./validate-data.sh John 0871234567)
+          echo "Expected: PASS, Actual: $result"
+          test "$result" = "PASS"
+
+      - name: Test name exceeding 15 characters
+        run: |
+          result=$(./validate-data.sh ChristopherAlexander 0871234567)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+
+      - name: Test mobile number exceeding 10 characters
+        run: |
+          result=$(./validate-data.sh John 087123456789)
+          echo "Expected: FAIL, Actual: $result"
+          test "$result" = "FAIL"
+EOF
+
+  240  ls -l .github/workflows/
+  241  ls
+  242  cat basictests.yml
+  243  cd ~/lab9
+  244  ls -la
+  245  git status
+  246  ls -l .github/workflows/
+  247  git add validate-data.sh
+  248  git add .github/workflows/basictests.yml
+  249  git commit -m "Add basic tests"
+  250  git push
+  251  git remote -v
+  252  git remote set-url origin git@github.com:X00226716-maggie/lab9.git
+  253  ssh -T git@github.com
+  254  git push -u origin main
+  255  git branch
+  256  git switch -c test
+  257  git branch
+  258  cat validate-data.sh
+  259  nano validate-data.sh
+  260  cat validate-data.sh
+  261  git add validate-data.sh
+  262  git commit -m
+  263  git push -u origin main
+  264  git push
+  265  git push - u origin test
+  266  git push -u origin test
+  267  history>history.txt
